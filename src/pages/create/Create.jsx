@@ -43,8 +43,7 @@ export default function Create() {
                 />
                 <label>
                     <span>Recipe ingredients:</span>
-                </label>
-                <div className='ingredients'>
+                    <div className='ingredients'>
                     <input
                     type="text"
                     onChange={event => setNewIngredient(event.target.value)}
@@ -53,6 +52,7 @@ export default function Create() {
                     />
                     <button className='btn' onClick={handleAdd}>add</button>
                 </div>
+                </label>
                 <label>
                     <span>Method:</span>
                 </label>
