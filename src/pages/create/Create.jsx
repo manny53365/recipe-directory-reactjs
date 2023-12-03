@@ -51,8 +51,9 @@ export default function Create() {
                     ref={ingredientInput}
                     />
                     <button className='btn' onClick={handleAdd}>add</button>
-                </div>
+                    </div>
                 </label>
+                <p>Current ingredients: {ingredients.map(ingredient => <em key={ingredient}>{ingredient}, </em>)}</p>
                 <label>
                     <span>Method:</span>
                 </label>
