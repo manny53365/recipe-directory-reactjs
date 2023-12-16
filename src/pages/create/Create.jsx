@@ -31,7 +31,6 @@ export default function Create() {
             await projectFirestore.collection('recipes').add(doc);
             history.push('/');
         } catch(err) {
-            console.log(err);
             setSubmissionError(err);
         }
     };

@@ -2,6 +2,12 @@ import { Link } from 'react-router-dom'
 
 import './RecipeList.css'
 import { useTheme } from '../hooks/useTheme'
+import trash from '../assets/delete_button.svg'
+import { projectFirestore } from '../firebase/config'
+
+const handleClick = (id) => {
+    projectFirestore.collection('recipes').doc(id).delete();
+}
 
 export default function RecipeList({ recipes }) {
 
@@ -18,6 +24,12 @@ export default function RecipeList({ recipes }) {
                         <p>{recipe.cookingTime} minutes to make.</p>
                         <div>{recipe.method.substring(0,100)}...</div>
                         <Link to={`/recipes/${recipe.id}`}>Cook this</Link>
+                        <img 
+                        src={trash}
+                        alt="delete recipe button"
+                        className='delete'
+                        onClick={() => handleClick(recipe.id)}
+                        />
                     </div>
                 ))}
             </div>
