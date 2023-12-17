@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/recipe-directory-reactjs/static/css/main.d3384d42.css",
+    "main.js": "/recipe-directory-reactjs/static/js/main.fc7ae9fb.js",
+    "index.html": "/recipe-directory-reactjs/index.html",
+    "static/media/darkmode_icon.svg": "/recipe-directory-reactjs/static/media/darkmode_icon.9b86dcd1cca26e54b58407dbfde815e5.svg",
+    "static/media/delete_button.svg": "/recipe-directory-reactjs/static/media/delete_button.642da2f9203fed7e99a03988591b154e.svg",
+    "main.d3384d42.css.map": "/recipe-directory-reactjs/static/css/main.d3384d42.css.map",
+    "main.fc7ae9fb.js.map": "/recipe-directory-reactjs/static/js/main.fc7ae9fb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d3384d42.css",
+    "static/js/main.fc7ae9fb.js"
+  ]
+}
