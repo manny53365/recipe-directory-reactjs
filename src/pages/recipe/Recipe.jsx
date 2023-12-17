@@ -20,7 +20,7 @@ export default function Recipe() {
     useEffect(() => {
         setIsPending(true);
 
-        projectFirestore.collection('recipes').doc(id).get().then(docSnapshot => {
+        const unsubscribe = projectFirestore.collection('recipes').doc(id).onSnapshot(docSnapshot => {
             if (docSnapshot.exists){
                 setIsPending(false);
                 setRecipe(docSnapshot.data());
@@ -28,7 +28,12 @@ export default function Recipe() {
                 setIsPending(false);
                 setError('Could not find the recipe');
             }
+        }, err => {
+            setError(err.message);
+            setIsPending(false);
         })
+
+        return () => unsubscribe();
     }, [id])
 
     return(
